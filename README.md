@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <b>RAGent</b> is a production-grade <b>hybrid Retrieval-Augmented Generation</b> engine wrapped in an
+    <b>RAGAI</b> is a production-grade <b>hybrid Retrieval-Augmented Generation</b> engine wrapped in an
   autonomous <b>LangGraph agent</b>. It answers from <b>your documents</b> and the <b>live web</b> — with
   grounded citations, token streaming, and a self-verification loop that never silently hallucinates.
 </p>
