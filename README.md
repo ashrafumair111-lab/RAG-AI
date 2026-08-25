@@ -52,18 +52,18 @@
 
 ```mermaid
 flowchart TD
-    U["User query"] --> R{"router<br/>Groq gpt-oss-20b"}
-    R -- "document intent" --> D["retrieve<br/>Qdrant + Cohere rerank"]
-    R -- "web intent" --> W["web_search<br/>Tavily"]
-    R -- "hybrid" --> D
-    R -- "no docs ingested" --> W
-    D -- "needs fresh info" --> W
-    D --> G["generate · Groq gpt-oss-120b<br/>token-streamed to client"]
+    U["User query"] --> R{"router · Groq gpt-oss-20b"}
+    R -->|document intent| D["retrieve · Qdrant + Cohere rerank"]
+    R -->|web intent| W["web_search · Tavily"]
+    R -->|hybrid| D
+    R -->|no docs ingested| W
+    D -->|needs fresh info| W
+    D --> G["generate · Groq gpt-oss-120b · token-streamed"]
     W --> G
     G --> C{"check · groundedness verifier"}
-    C -- "grounded ✓" --> E["cited answer + sources"]
-    C -- "ungrounded & web unused" -->|retry once| W
-    C -- "ungrounded, web used" --> E
+    C -->|grounded| E["cited answer + sources"]
+    C -->|not grounded, web unused| W
+    C -->|not grounded, web used| E
 ```
 
 ## ⚙️ How it works
