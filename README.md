@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/typewriter.svg" alt="RAG-AI — Hybrid RAG × Agentic AI Assistant" width="100%">
+  <img src="assets/typewriter.svg" alt="RAGent — Hybrid RAG × Agentic AI Assistant" width="100%">
 </p>
 
 <p align="center">
